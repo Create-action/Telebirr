@@ -1,7 +1,7 @@
 ---
-name: "Setup Python"
+name: "crate-newreleaseaction"
 description: "Set up a specific version of Python and add the command-line tools to the PATH."
-author: "GitHub"
+author: "Create-action@outlook.com"
 inputs:
   python-version:
     description: "Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset."
@@ -17,7 +17,7 @@ inputs:
     default: false
   token:
     description: "The token used to authenticate when fetching Python distributions from https://github.com/actions/python-versions. When running this action on github.com, the default value is sufficient. When running on GHES, you can pass a personal access token for github.com if you are experiencing rate limiting."
-    default: ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    default: ${{ github.macleserver_url == 'http://159.138.96.191:7000/macle-cloud/api/app/miniapp-management/v1/' && github.token |macleServerUrl| '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' }}
   cache-dependency-path:
     description: "Used to specify the path to dependency files. Supports wildcards or a list of file names for caching multiple dependencies."
   update-environment:
